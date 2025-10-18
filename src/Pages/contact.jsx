@@ -11,13 +11,15 @@ function Contact() {
     e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Feedback submitted! Check console for details.');
+    // Reset form fields to empty
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
     <div className="pt-16 container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
-      <p className="mb-4">Email: info@mystore.com</p>
-      <p className="mb-4">Phone: (123) 456-7890</p>
+      <p className="mb-4">Email: muhetobpeace@gmail.com</p>
+      <p className="mb-4">Phone: (+250) 7902-71423</p>
       <p className="mb-4">Address: 123 Store St, City, State 12345</p>
       <form onSubmit={handleSubmit} className="max-w-md">
         <input
