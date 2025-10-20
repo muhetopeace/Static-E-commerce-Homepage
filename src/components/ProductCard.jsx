@@ -6,19 +6,19 @@ function ProductCard({ image, name, price, stock }) {
 
   return (
     <>
-      <div className="bg-white p-4 rounded shadow-md relative">
+      <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
         {stock < 5 && (
-          <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+          <span className="absolute top-2 right-2 bg-pink-400 text-white text-xs font-semibold px-2 py-1 rounded-full">
             Low Stock: {stock}
           </span>
         )}
-        <img src={image} alt={name} className="w-full h-48 object-cover mb-2" />
-        <h3 className="text-lg font-bold">{name}</h3>
-        <p className="text-gray-600">${price}</p>
+        <img src={image} alt={name} className="w-full h-48 object-cover rounded-md mb-3" />
+        <h3 className="text-lg font-semibold font-sans text-gray-800">{name}</h3>
+        <p className="text-gray-600 font-medium">${price.toFixed(2)}</p>
         <button
           onClick={handleAddToCart}
-          className={`px-4 py-2 mt-2 rounded text-white ${
-            stock === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-700'
+          className={`w-full mt-3 px-4 py-2 rounded-md text-white font-sans ${
+            stock === 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-gray-400 hover:bg-blue-600 transition-colors'
           }`}
           disabled={stock === 0}
         >
