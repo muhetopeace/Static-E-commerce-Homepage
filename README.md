@@ -1,75 +1,89 @@
-# React + TypeScript + Vite
+. Website Pages
+. Home Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Contains a hero section with a store tagline and welcome message.
 
-Currently, two official plugins are available:
+Displays featured product cards (at least 8).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Includes a “Shop Now” button that navigates to the Products page.
 
-## React Compiler
+. Products Page
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Displays 6+ static products, grouped by categories (Electronics, Fashion, Accessories, etc.).
 
-Note: This will impact Vite dev & build performances.
+Each product shows:
 
-## Expanding the ESLint configuration
+Image
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Name
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Price
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+“Add to Cart” button (logs "Added [Product Name] to cart" to the console).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Uses props to pass product information to each ProductCard component.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+.About Page
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Short description about the company, its mission, and values.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Includes a “Why Choose Us” section with 3–4 key points.
+
+. Contact Page
+
+Displays company contact details (email, phone, address).
+
+Contains a feedback form with name, email, and message fields.
+
+Submitting logs the input values to the console (no backend functionality).
+
+Design & Styling
+
+Fully styled using Tailwind CSS.
+
+Responsive on desktop, tablet, and mobile.
+
+Navbar and Footer appear on every page.
+
+Consistent layout and color scheme across all sections.
+
+ Event Handling
+
+Clicking “Add to Cart” logs a message in the console.
+
+Clicking “Shop Now” navigates to the Products page.
+
+Submitting the Contact Form logs the form input values to the console.
+
+ Technologies Used
+
+React (for UI components and routing)
+
+React Router DOM (for page navigation)
+
+Tailwind CSS (for responsive styling)
+
+TypeScript (optional) (for type safety and clean structure) 
+
+GitHub Commit Examples
+
+Added Navbar and Footer components
+
+Created ProductCard with props
+
+Styled HomePage with Tailwind
+
+Handled Add to Cart click event
+
+Added routing for About and Contact pages
+
+Improved responsiveness and layout
+
+ Evaluation Coverage
+
+✅ Completeness (All pages done)
+✅ Props Usage (ProductCard uses props)
+✅ Event Handling (Buttons log messages)
+✅ Design & Responsiveness (Tailwind used)
+✅ GitHub Usage (Multiple commits)
+✅ Documentation (This README included)
